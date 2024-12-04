@@ -27,9 +27,10 @@ const Header: React.FC = () => {
     <header className="bg-white shadow fixed w-full z-10">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         <RouterLink to="/" className="text-2xl font-bold text-primary">
-          DeReview
+          {/* DeReview */}
+          <img src="/assets/logo.png" alt="DeReview" className="h-10 w-auto" />
         </RouterLink>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <XMarkIcon className="h-6 w-6 text-primary" />
@@ -38,7 +39,7 @@ const Header: React.FC = () => {
             )}
           </button>
         </div>
-        <nav className="md:flex space-x-6 hidden">
+        <nav className="lg:flex space-x-6 hidden">
           <RouterLink to="/" className="text-text hover:text-primary">
             Home
           </RouterLink>
@@ -67,7 +68,7 @@ const Header: React.FC = () => {
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow">
+        <div className="container mx-auto lg:hidden bg-white">
           <nav className="flex flex-col space-y-2 px-6 py-4">
             <RouterLink to="/" className="text-text hover:text-primary" onClick={() => setIsOpen(false)}>
               Home
