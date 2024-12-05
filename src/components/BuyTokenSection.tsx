@@ -1,19 +1,85 @@
 import React from 'react';
+import { CurrencyDollarIcon, ShieldCheckIcon, UserGroupIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const BuyTokenSection: React.FC = () => {
+  const features = [
+    {
+      title: 'Utility Token',
+      description: 'Power the DeReview ecosystem and participate in governance',
+      icon: CurrencyDollarIcon
+    },
+    {
+      title: 'Staking Rewards',
+      description: 'Earn rewards by staking DVW tokens and securing the network',
+      icon: ShieldCheckIcon
+    },
+    {
+      title: 'Governance Rights',
+      description: 'Vote on protocol upgrades and community proposals',
+      icon: UserGroupIcon
+    }
+  ];
+
   return (
-    <section id="buy-token" className="py-20 bg-background">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-8 text-text">Buy DVW Token</h2>
-        <p className="max-w-2xl mx-auto mb-8 text-lg text-gray-700">
-          Be part of the future! Purchase DVW tokens now on the Osmosis network and join us in launching the DeReview chain. Transfer your tokens seamlessly via IBC once our chain is live.
-        </p>
-        <a
-          href="#"
-          className="bg-accent text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-accent-dark transition duration-300"
-        >
-          Buy DVW Token
-        </a>
+    <section id="buy-token" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-text">Buy DVW Token</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Join us in launching the DeReview chain. Purchase DVW tokens now and be part of the future of decentralized reviews.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {features.map((feature) => (
+            <div 
+              key={feature.title}
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="mb-6">
+                <feature.icon className="w-16 h-16 mx-auto text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-center">{feature.title}</h3>
+              <p className="text-gray-600 text-center">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-primary/5 rounded-2xl p-8 md:p-12">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Token Details</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-3">
+                  <span className="font-semibold">Network:</span>
+                  <span>Osmosis</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="font-semibold">Token Type:</span>
+                  <span>IBC Compatible</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="font-semibold">Total Supply:</span>
+                  <span>1,000,000,000 DVW</span>
+                </li>
+              </ul>
+            </div>
+            <div className="text-center md:text-right">
+              <a
+                href="https://app.osmosis.zone"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primary-dark transition duration-300"
+              >
+                <span>Buy on Osmosis</span>
+                <ArrowRightIcon className="w-5 h-5" />
+              </a>
+              <p className="mt-4 text-sm text-gray-600">
+                Tokens will be transferable via IBC once our chain launches
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

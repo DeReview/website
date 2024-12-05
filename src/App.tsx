@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <div className="font-sans antialiased text-text bg-background">
       <Header />
-      <main className="pt-16">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
