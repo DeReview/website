@@ -51,8 +51,8 @@ const Header: React.FC = () => {
   const headerClasses = `
     fixed w-full z-50 transition-all duration-300
     ${shouldBeTransparent
-      ? 'bg-transparent py-4' 
-      : 'bg-white/95 backdrop-blur-md shadow-md py-2'}
+      ? 'text-white bg-transparent py-6' 
+      : 'bg-white/95 backdrop-blur-md shadow-md py-4'}
   `;
 
   return (
