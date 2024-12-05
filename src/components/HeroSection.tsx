@@ -25,12 +25,12 @@ const HeroSection: React.FC = () => {
             >
               Learn More
             </a>
-            <a 
+            {/* <a 
               href="#join" 
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transition duration-300 text-lg"
             >
               Get Started
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
