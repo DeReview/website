@@ -4,7 +4,7 @@ import {
   CubeTransparentIcon, 
   CurrencyDollarIcon, 
   UserGroupIcon,
-  ChevronRightIcon 
+  // ChevronRightIcon 
 } from '@heroicons/react/24/solid';
 
 const HowItWorksSection: React.FC = () => {
@@ -75,7 +75,7 @@ const HowItWorksSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <a 
             href="#join" 
             className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primary-dark transition duration-300"
@@ -83,7 +83,7 @@ const HowItWorksSection: React.FC = () => {
             <span>Get Started Now</span>
             <ChevronRightIcon className="w-5 h-5" />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

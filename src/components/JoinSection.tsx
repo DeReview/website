@@ -30,8 +30,12 @@ const JoinSection: React.FC = () => {
   ];
 
   return (
-    <section id="join" className="py-20 bg-gradient-to-br from-primary/95 to-primary-dark text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="join" className="relative py-20 bg-gradient-to-br from-primary/95 to-primary-dark text-white">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
+        style={{ backgroundImage: `url('/assets/join-bg.webp')` }}
+      />
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Join the Movement</h2>
           <p className="text-lg text-gray-100 max-w-2xl mx-auto">
@@ -66,8 +70,9 @@ const JoinSection: React.FC = () => {
 
         <div className="mt-16 text-center">
           <a
-            href="#"
-            className="inline-flex items-center space-x-2 bg-white text-primary px-8 py-4 rounded-full hover:bg-gray-100 transition duration-300"
+            href="https://github.com/dereview"
+            target="_blank"
+            className="cursor-pointer inline-flex items-center space-x-2 bg-white text-primary px-8 py-4 rounded-full hover:bg-gray-100 transition duration-300"
           >
             <span>Start Contributing</span>
             <ChevronRightIcon className="w-5 h-5"/>
