@@ -1,4 +1,10 @@
 import React from 'react';
+import { 
+  LockClosedIcon, 
+  UsersIcon, 
+  CircleStackIcon,
+  ShieldCheckIcon 
+} from '@heroicons/react/24/solid';
 
 const WhySection: React.FC = () => {
   return (
@@ -8,10 +14,8 @@ const WhySection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="group p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="mb-6">
-              <img 
-                src="/assets/icons/immutable.svg" 
-                alt="Immutable" 
-                className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+              <LockClosedIcon 
+                className="w-16 h-16 mx-auto text-primary group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-center">Immutable and Transparent</h3>
@@ -20,10 +24,8 @@ const WhySection: React.FC = () => {
           
           <div className="group p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="mb-6">
-              <img 
-                src="/assets/icons/decentralized.svg" 
-                alt="Decentralized" 
-                className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+              <CircleStackIcon 
+                className="w-16 h-16 mx-auto text-primary group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-center">Decentralized Platform</h3>
@@ -32,10 +34,8 @@ const WhySection: React.FC = () => {
           
           <div className="group p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="mb-6">
-              <img 
-                src="/assets/icons/community.svg" 
-                alt="Community" 
-                className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+              <UsersIcon 
+                className="w-16 h-16 mx-auto text-primary group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-center">Community-Driven</h3>
@@ -44,10 +44,8 @@ const WhySection: React.FC = () => {
           
           <div className="group p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="mb-6">
-              <img 
-                src="/assets/icons/secure.svg" 
-                alt="Secure" 
-                className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+              <ShieldCheckIcon 
+                className="w-16 h-16 mx-auto text-primary group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-center">Secure and Private</h3>

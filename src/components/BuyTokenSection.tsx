@@ -1,21 +1,22 @@
 import React from 'react';
+import { CurrencyDollarIcon, ShieldCheckIcon, UserGroupIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const BuyTokenSection: React.FC = () => {
   const features = [
     {
       title: 'Utility Token',
       description: 'Power the DeReview ecosystem and participate in governance',
-      icon: '/assets/icons/token.svg'
+      icon: CurrencyDollarIcon
     },
     {
       title: 'Staking Rewards',
       description: 'Earn rewards by staking DVW tokens and securing the network',
-      icon: '/assets/icons/staking.svg'
+      icon: ShieldCheckIcon
     },
     {
       title: 'Governance Rights',
       description: 'Vote on protocol upgrades and community proposals',
-      icon: '/assets/icons/governance.svg'
+      icon: UserGroupIcon
     }
   ];
 
@@ -30,17 +31,13 @@ const BuyTokenSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, _) => (
+          {features.map((feature) => (
             <div 
               key={feature.title}
               className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="mb-6">
-                <img 
-                  src={feature.icon} 
-                  alt={feature.title} 
-                  className="w-16 h-16 mx-auto"
-                />
+                <feature.icon className="w-16 h-16 mx-auto text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-center">{feature.title}</h3>
               <p className="text-gray-600 text-center">{feature.description}</p>
@@ -75,19 +72,7 @@ const BuyTokenSection: React.FC = () => {
                 className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primary-dark transition duration-300"
               >
                 <span>Buy on Osmosis</span>
-                <svg 
-                  className="w-5 h-5" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                  />
-                </svg>
+                <ArrowRightIcon className="w-5 h-5" />
               </a>
               <p className="mt-4 text-sm text-gray-600">
                 Tokens will be transferable via IBC once our chain launches

@@ -1,4 +1,5 @@
 import React from 'react';
+import { UserGroupIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/solid';
 
 const AboutSection: React.FC = () => {
   return (
@@ -15,11 +16,11 @@ const AboutSection: React.FC = () => {
             </p>
             <div className="mt-8 flex gap-4">
               <div className="flex items-center gap-2">
-                <img src="/assets/icons/users.svg" alt="Users" className="w-8 h-8" />
+                <UserGroupIcon className="w-8 h-8 text-primary" />
                 <span className="text-xl font-semibold">10K+ Users</span>
               </div>
               <div className="flex items-center gap-2">
-                <img src="/assets/icons/reviews.svg" alt="Reviews" className="w-8 h-8" />
+                <ChatBubbleLeftRightIcon className="w-8 h-8 text-primary" />
                 <span className="text-xl font-semibold">50K+ Reviews</span>
               </div>
             </div>
