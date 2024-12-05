@@ -26,7 +26,7 @@ const AboutSection: React.FC = () => {
           </div>
           <div className="order-1 lg:order-2 relative">
             <img 
-              src="/assets/about-illustration.png" 
+              src="/assets/about-illustration.webp" 
               alt="DeReview Platform" 
               className="w-full max-w-lg mx-auto rounded-lg shadow-xl"
             />

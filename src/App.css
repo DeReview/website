@@ -49,7 +49,16 @@ html {
 
 /* Animations */
 .animate-fade-in {
-  animation: fadeIn 0.5s ease-in;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
 }
 
 @keyframes fadeIn {
@@ -61,6 +70,16 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the header doesn't cover section anchors */
+html {
+  scroll-padding-top: 5rem; /* Adjust this value based on your header height */
 }
 
 .logo {

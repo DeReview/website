@@ -30,7 +30,7 @@ const BuyTokenSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature, _) => (
             <div 
               key={feature.title}
               className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"

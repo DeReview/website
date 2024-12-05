@@ -33,7 +33,7 @@ const JoinSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {roles.map((role, index) => (
+          {roles.map((role, _) => (
             <div 
               key={role.title}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:transform hover:-translate-y-1 transition-all duration-300"
